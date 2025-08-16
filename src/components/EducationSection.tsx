@@ -14,7 +14,7 @@ const EducationSection = () => {
       modules: [
         "Molecular Biology", "Genetic Engineering", "Bioinformatics", "Analytical Techniques",
         "Cell Biology", "Microbiology", "Biochemistry", "Bioprocess Engineering",
-        "Immunology", "Pharmacology", "Research Methodology", "Biostatistics"
+        "Immunology", "Research Methodology"
       ],
       achievements: [
         "Final-year research project on computational drug discovery",
@@ -30,7 +30,7 @@ const EducationSection = () => {
       status: "Completed",
       type: "Higher Secondary",
       description: "Completed higher secondary education with focus on science subjects including Biology, Chemistry, Physics, and Mathematics.",
-      subjects: ["Biology", "Chemistry", "Physics", "Mathematics", "English", "Computer Science"],
+      subjects: ["Biology", "Chemistry", "Physics", "English", "Biotechnology"],
       achievements: [
         "Strong foundation in core science subjects",
         "Developed analytical and problem-solving skills",

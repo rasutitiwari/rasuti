@@ -17,7 +17,7 @@ const ExperienceSection = () => {
         "Collaborated with research team on drug repurposing methodologies",
         "Contributed to research publications and technical reports"
       ],
-      skills: ["Molecular Docking", "Drug Repurposing", "PyRx", "Discovery Studio", "Antiviral Research"],
+      skills: ["Molecular Docking", "Drug Repurposing", "PyRx", "Discovery Studio"],
       color: "primary"
     },
     {
@@ -30,7 +30,6 @@ const ExperienceSection = () => {
       responsibilities: [
         "Implemented NIRS techniques for fruit ripeness and quality assessment",
         "Analyzed spectral data to determine fruit composition and maturity levels",
-        "Developed protocols for non-destructive testing methodologies",
         "Compiled comprehensive findings and recommendations for The Fruit Project"
       ],
       skills: ["Near Infrared Spectroscopy", "Data Analysis", "Agricultural Biotech", "Quality Assessment"],

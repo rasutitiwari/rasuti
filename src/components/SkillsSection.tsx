@@ -10,11 +10,9 @@ const SkillsSection = () => {
       title: "Technical Proficiency",
       color: "primary",
       skills: [
-        { name: "PCR & Gel Electrophoresis", level: 90 },
-        { name: "Cell Culture Techniques", level: 85 },
-        { name: "Spectrophotometry", level: 88 },
-        { name: "Protein Analysis", level: 82 },
-        { name: "Molecular Cloning", level: 80 }
+        "PCR & Gel Electrophoresis",
+        "Cell Culture Techniques", 
+        "Spectrophotometry"
       ]
     },
     {
@@ -22,11 +20,13 @@ const SkillsSection = () => {
       title: "Software & Tools",
       color: "secondary",
       skills: [
-        { name: "PyRx & Discovery Studio", level: 92 },
-        { name: "R Programming", level: 88 },
-        { name: "PubChem & NCBI Tools", level: 95 },
-        { name: "KEGG Database", level: 90 },
-        { name: "RNA-seq Analysis", level: 85 }
+        "PyRx",
+        "Discovery Studio",
+        "R Programming",
+        "PubChem",
+        "NCBI Tools",
+        "GEO Datasets",
+        "KEGG"
       ]
     },
     {
@@ -34,19 +34,15 @@ const SkillsSection = () => {
       title: "Analytical Skills",
       color: "accent",
       skills: [
-        { name: "Differential Gene Expression", level: 90 },
-        { name: "GO/KEGG Enrichment", level: 88 },
-        { name: "Database Design", level: 85 },
-        { name: "Statistical Analysis", level: 87 },
-        { name: "Data Visualization", level: 83 }
+        "Differential Gene Expression",
+        "GO/KEGG Enrichment"
       ]
     }
   ];
 
   const technicalTools = [
     "PyRx", "Discovery Studio", "R Programming", "Python", "PubChem", "GEO Datasets",
-    "NCBI Tools", "KEGG", "Cytoscape", "ImageJ", "GraphPad Prism", "SPSS",
-    "ChemDraw", "VMD", "UCSF Chimera", "Galaxy", "Bioconductor", "DESeq2"
+    "NCBI Tools", "KEGG", "Galaxy"
   ];
 
   return (
@@ -85,17 +81,11 @@ const SkillsSection = () => {
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                        <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                      </div>
-                      <Progress 
-                        value={skill.level} 
-                        className="h-2"
-                      />
+                    <div key={skillIndex} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-current rounded-full flex-shrink-0 opacity-60"></div>
+                      <span className="text-sm font-medium text-foreground">{skill}</span>
                     </div>
                   ))}
                 </div>
@@ -130,7 +120,7 @@ const SkillsSection = () => {
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                "PCR Thermocycler", "Gel Electrophoresis System", "Spectrophotometer", "Centrifuge",
+                "PCR", "Gel Electrophoresis", "Spectrophotometer", "Centrifuge",
                 "Microscopes", "Incubators", "Autoclave", "Laminar Flow Hood",
                 "Cell Culture Equipment", "pH Meter", "Balance", "Pipettes"
               ].map((equipment, index) => (

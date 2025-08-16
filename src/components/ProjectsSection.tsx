@@ -2,15 +2,25 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Microscope, Dna, Search, Database } from 'lucide-react';
+import { useState } from 'react';
+import ProjectModal from './ProjectModal';
 
 const ProjectsSection = () => {
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
   const projects = [
     {
       icon: <Search className="w-6 h-6" />,
       title: "Molecular Docking for SARS-CoV-2 Mpro",
       description: "Computational drug screening project targeting SARS-CoV-2 main protease using FDA-approved drugs for therapeutic repurposing.",
       methods: "PyRx, Discovery Studio, AutoDock, PubChem, Protein Data Bank",
-      impact: "Identified 15 strong-binding candidates with binding affinities < -8.0 kcal/mol, contributing to antiviral drug repurposing research.",
+      impact: "Identified 20 strong-binding candidates with binding affinities < -8.0 kcal/mol, contributing to antiviral drug repurposing research.",
       tags: ["Molecular Docking", "Drug Repurposing", "SARS-CoV-2", "Computational Biology"],
       color: "primary"
     },
@@ -18,8 +28,8 @@ const ProjectsSection = () => {
       icon: <Dna className="w-6 h-6" />,
       title: "Key DEG Identification in NSCLC",
       description: "Comprehensive analysis of differential gene expression in Non-Small Cell Lung Cancer using high-throughput RNA-seq data.",
-      methods: "R Programming, GEO Datasets, DESeq2, GO/KEGG Enrichment Analysis, Cytoscape",
-      impact: "Discovered 847 differentially expressed genes and identified 12 potential biomarkers for targeted NSCLC therapy.",
+      methods: "R Programming, GEO Datasets, GO/KEGG Enrichment Analysis",
+      impact: "Discovered potential biomarkers for targeted therapy.",
       tags: ["RNA-seq", "Cancer Genomics", "Biomarkers", "Gene Expression"],
       color: "secondary"
     },
@@ -27,18 +37,17 @@ const ProjectsSection = () => {
       icon: <Microscope className="w-6 h-6" />,
       title: "Host Response in Infectious Keratitis",
       description: "RNA-seq analysis investigating host immune responses and pathway alterations during infectious keratitis progression.",
-      methods: "Galaxy Platform, KEGG Pathway Analysis, Immune Response Profiling, Statistical Analysis",
-      impact: "Mapped 45 key immune pathways and identified diagnostic markers, providing insights for therapeutic intervention strategies.",
+      methods: "Galaxy Platform, KEGG Pathway Analysis",
+      impact: "Provided insights for disease diagnosis and therapeutic research.",
       tags: ["Immune Response", "Infectious Disease", "Pathway Analysis", "Diagnostics"],
       color: "accent"
     },
     {
       icon: <Database className="w-6 h-6" />,
       title: "Lymphatic Filariasis Database Design",
-      description: "Comprehensive biomedical database development with ER modeling and web interface for lymphatic filariasis research data management.",
-      methods: "Database Design, ER Diagrams, MySQL, Web Development, Data Integration",
-      impact: "Created scalable database architecture serving 1000+ research entries with intuitive web interface for clinical researchers.",
-      tags: ["Database Design", "Biomedical Informatics", "Web Development", "Data Management"],
+      description: "Comprehensive biomedical database development with ER modeling for lymphatic filariasis research data management.",
+      methods: "Database Design, ER Diagrams, Data Integration",
+      tags: ["Database Design", "Biomedical Informatics", "Data Management"],
       color: "primary"
     }
   ];
@@ -96,12 +105,14 @@ const ProjectsSection = () => {
                   </div>
 
                   {/* Impact */}
-                  <div className="mb-6">
-                    <h4 className="font-medium text-sm text-foreground mb-2">Key Impact:</h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {project.impact}
-                    </p>
-                  </div>
+                  {project.impact && (
+                    <div className="mb-6">
+                      <h4 className="font-medium text-sm text-foreground mb-2">Key Impact:</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {project.impact}
+                      </p>
+                    </div>
+                  )}
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -121,6 +132,7 @@ const ProjectsSection = () => {
                     variant={project.color === 'primary' ? 'scientific' : project.color === 'secondary' ? 'biotech' : 'default'} 
                     size="sm" 
                     className="w-full"
+                    onClick={() => handleProjectClick(project)}
                   >
                     <ExternalLink className="w-4 h-4" />
                     View Project Details
@@ -149,6 +161,13 @@ const ProjectsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Project Details Modal */}
+      <ProjectModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
