@@ -54,6 +54,7 @@ const HeroSection = () => {
           {/* Call-to-Action Buttons */}
           <div className="animate-scale-in flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" 
                style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+            
             <Button 
               variant="hero" 
               size="lg"
@@ -63,13 +64,15 @@ const HeroSection = () => {
               <ExternalLink className="w-5 h-5" />
               Explore My Work
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3 hover:bg-accent/50">
-  <a href="/RasutiCV.pdf" download className="flex items-center gap-2">
-    <Download className="w-5 h-5" />
-    Download CV
-  </a>
-</Button>
 
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3 hover:bg-accent/50">
+              <a href="/RasutiCV.pdf" download className="flex items-center gap-2">
+                <Download className="w-5 h-5" />
+                Download CV
+              </a>
+            </Button>
+
+          </div>
 
           {/* Statistics */}
           <div className="animate-fade-in grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-12" 
