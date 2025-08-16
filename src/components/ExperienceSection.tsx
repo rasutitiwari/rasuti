@@ -13,9 +13,7 @@ const ExperienceSection = () => {
       description: "Conducted comprehensive antiviral drug screening against SARS-CoV-2 main protease (Mpro), focusing on FDA-approved drug repurposing strategies for COVID-19 therapeutics.",
       responsibilities: [
         "Performed molecular docking studies using PyRx and Discovery Studio",
-        "Analyzed binding affinities and interaction patterns of potential antiviral compounds",
-        "Collaborated with research team on drug repurposing methodologies",
-        "Contributed to research publications and technical reports"
+        "Analyzed binding affinities and interaction patterns of potential antiviral compounds"
       ],
       skills: ["Molecular Docking", "Drug Repurposing", "PyRx", "Discovery Studio"],
       color: "primary"
@@ -26,9 +24,9 @@ const ExperienceSection = () => {
       location: "Remote",
       period: "2024",
       type: "Internship",
-      description: "Applied Near Infrared Spectroscopy (NIRS) technology for non-destructive fruit quality analysis, developing innovative solutions for agricultural biotechnology applications.",
+      description: "Applied Near Infrared Spectroscopy (NIR) technology for non-destructive fruit quality analysis, developing innovative solutions for agricultural biotechnology applications.",
       responsibilities: [
-        "Implemented NIRS techniques for fruit ripeness and quality assessment",
+        "For fruit ripeness and quality assessment NIR technique was studied",
         "Analyzed spectral data to determine fruit composition and maturity levels",
         "Compiled comprehensive findings and recommendations for The Fruit Project"
       ],
@@ -49,6 +47,12 @@ const ExperienceSection = () => {
       organization: "NIIT University",
       year: "2025",
       type: "Workshop"
+    },
+    {
+      title: "Research Intern",
+      organization: "RAAV Techlabs",
+      year: "2024",
+      type: "Internship"
     },
     {
       title: "Google Ads Creative Certificate",
