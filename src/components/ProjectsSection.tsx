@@ -15,42 +15,46 @@ const ProjectsSection = () => {
   };
 
   const projects = [
-    {
-      icon: <Search className="w-6 h-6" />,
-      title: "Molecular Docking for SARS-CoV-2 Mpro",
-      description: "Computational drug screening project targeting SARS-CoV-2 main protease using FDA-approved drugs for therapeutic repurposing.",
-      methods: "PyRx, Discovery Studio, AutoDock, PubChem, Protein Data Bank",
-      impact: "Identified 20 strong-binding candidates with binding affinities < -8.0 kcal/mol, contributing to antiviral drug repurposing research.",
-      tags: ["Molecular Docking", "Drug Repurposing", "SARS-CoV-2", "Computational Biology"],
-      color: "primary"
-    },
-    {
-      icon: <Dna className="w-6 h-6" />,
-      title: "Key DEG Identification in NSCLC",
-      description: "Comprehensive analysis of differential gene expression in Non-Small Cell Lung Cancer using high-throughput RNA-seq data.",
-      methods: "R Programming, GEO Datasets, GO/KEGG Enrichment Analysis",
-      impact: "Discovered potential biomarkers for targeted therapy.",
-      tags: ["RNA-seq", "Cancer Genomics", "Biomarkers", "Gene Expression"],
-      color: "secondary"
-    },
-    {
-      icon: <Microscope className="w-6 h-6" />,
-      title: "Host Response in Infectious Keratitis",
-      description: "RNA-seq analysis investigating host immune responses and pathway alterations during infectious keratitis progression.",
-      methods: "Galaxy Platform, KEGG Pathway Analysis",
-      impact: "Provided insights for disease diagnosis and therapeutic research.",
-      tags: ["Immune Response", "Infectious Disease", "Pathway Analysis", "Diagnostics"],
-      color: "accent"
-    },
-    {
-      icon: <Database className="w-6 h-6" />,
-      title: "Lymphatic Filariasis Database Design",
-      description: "Comprehensive biomedical database development with ER modeling for lymphatic filariasis research data management.",
-      methods: "Database Design, ER Diagrams, Data Integration",
-      tags: ["Database Design", "Biomedical Informatics", "Data Management"],
-      color: "primary"
-    }
-  ];
+  {
+    icon: <Search className="w-6 h-6" />,
+    title: "Molecular Docking for SARS-CoV-2 Mpro",
+    description: "Computational drug screening project targeting SARS-CoV-2 main protease using FDA-approved drugs for therapeutic repurposing.",
+    methods: "PyRx, Discovery Studio, AutoDock, PubChem, Protein Data Bank",
+    impact: "Identified 20 strong-binding candidates with binding affinities < -8.0 kcal/mol, contributing to antiviral drug repurposing research.",
+    tags: ["Molecular Docking", "Drug Repurposing", "SARS-CoV-2", "Computational Biology"],
+    color: "primary",
+    report: "/Bioinformatics summer Project.pdf"
+  },
+  {
+    icon: <Dna className="w-6 h-6" />,
+    title: "Key DEG Identification in NSCLC",
+    description: "Comprehensive analysis of differential gene expression in Non-Small Cell Lung Cancer using high-throughput RNA-seq data.",
+    methods: "R Programming, GEO Datasets, GO/KEGG Enrichment Analysis",
+    impact: "Discovered potential biomarkers for targeted therapy.",
+    tags: ["RNA-seq", "Cancer Genomics", "Biomarkers", "Gene Expression"],
+    color: "secondary",
+    report: "/Final report R&D.docx"
+  },
+  {
+    icon: <Microscope className="w-6 h-6" />,
+    title: "Host Response in Infectious Keratitis",
+    description: "RNA-seq analysis investigating host immune responses and pathway alterations during infectious keratitis progression.",
+    methods: "Galaxy Platform, KEGG Pathway Analysis",
+    impact: "Provided insights for disease diagnosis and therapeutic research.",
+    tags: ["Immune Response", "Infectious Disease", "Pathway Analysis", "Diagnostics"],
+    color: "accent",
+    report: "/Report (Capstone Project - 1).pdf"
+  },
+  {
+    icon: <Database className="w-6 h-6" />,
+    title: "Website using WordPress",
+    description: "Built and designed The Green Atelier, a WordPress website focused on garden essentials and eco-friendly products. The site included product listings, blogs and contact forms with a clean, responsive and SEO-optimized design using tools like WooCommerce and Elementor.",
+    methods: "Web Design, Web Development, Content Management, SEO, E-Commerce Integration, Branding and Visual Communication",
+    tags: ["WordPress", "Web Design", "Web Development", "SEO", "E-Commerce"],
+    color: "primary",
+    report: "https://g1.soulpetrol.in/"
+  }
+];
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
